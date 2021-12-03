@@ -1,0 +1,18 @@
+#jinja2: trim_blocks: True, lstrip_blocks: True
+{{ ansible_managed | comment }}
+global:
+  {{ vmagent_global | to_nice_yaml(indent=2) | indent(2, False) }}
+
+scrape_configs:
+  {{ vmagent_scrape_configs | to_nice_yaml(indent=2) | indent(2,False) }}
+  # - job_name: 'ecs-task-targets'
+  #   scrape_interval: 15s
+  #   file_sd_configs:
+  #       - files:
+  #             - /home/ubuntu/aws-exporter/aws-cloudwatch-exporter-21.11.0.af2fb39/ecs_task_scrape_targets.yml      
+  #   PLEASE UNCOMMENT AND SPECIFY ENVIRONMENT
+  #   - sourceLabels: [__name__, tag_asserts_env_name]
+  #     regex: aws_.+
+  #     targetLabel: asserts_env
+  #     action: replace
+  #     replacement: dev  
