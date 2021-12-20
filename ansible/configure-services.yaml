@@ -10,6 +10,7 @@
     - role: ansible-role-java
       java_packages:
         - openjdk-8-jdk
+    - role: ansible-node-exporter    
     - role: ansible-vmagent
       vmagent_remote_write:
         - url: <REMOTE-WRITE-URL> -remoteWrite.basicAuth.username=<USERNAME> -remoteWrite.basicAuth.password=<PASSWORD>
@@ -24,6 +25,10 @@
           static_configs:
           - targets:
             - localhost:8429
+        - job_name: nodeexporter
+          static_configs:
+          - targets:
+            - localhost:9100            
         - job_name: aws-exporter
           metrics_path: '/aws-exporter/actuator/prometheus'
           static_configs:
@@ -39,7 +44,7 @@
   post_tasks:
     - name: Run the exporter
       shell: |
-        cd AWS_EXPORTER_DIRECTORY_NAME/
+        cd aws-cloudwatch-exporter/
         cp conf/cloudwatch_scrape_config_sample.yml .
         mv cloudwatch_scrape_config_sample.yml cloudwatch_scrape_config.yml
         bin/aws-cloudwatch-exporter &
