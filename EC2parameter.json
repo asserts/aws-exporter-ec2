@@ -1,34 +1,34 @@
 [
-  {
-      "ParameterKey": "InstanceType",
-      "ParameterValue": "Enter the Instance Type eg: t2.micro" 
-  },
-  {
-      "ParameterKey": "KeyName",
-      "ParameterValue": "Enter name of an existing EC2 KeyPair to enable SSH access to the instance"
-  },
-  {
-      "ParameterKey": "Subnet",
-      "ParameterValue": "Enter the subnet ID"
-  },
-  {
-      "ParameterKey": "SG",
-      "ParameterValue": "Enter the The SG IDs of the EC2 instance"
-  },
-  {
-      "ParameterKey": "Image",
-      "ParameterValue": "Enter the Ubuntu18 AMI eg: ami-074251216af698218 Eg: you can refer th this link and get the base AMI (https://cloud-images.ubuntu.com/locator/ec2/)"
-  },
-  {
-      "ParameterKey": "Disksize",
-      "ParameterValue": "Enter the disk size. Preferred 30"
-  },
-  {
-      "ParameterKey": "AvailabilityZone",
-      "ParameterValue": "Enter the The AZ of the EC2 instance"
-  },
-  {
-      "ParameterKey": "VpcID",
-      "ParameterValue": "Enter the The VPC id of the EC2 instance"
-  }    
+    {
+        "ParameterKey": "InstanceType",
+        "ParameterValue": "Enter the Instance Type eg: t2.micro" 
+    },
+    {
+        "ParameterKey": "KeyName",
+        "ParameterValue": "Enter name of an existing EC2 KeyPair to enable SSH access to the instance"
+    },
+    {
+        "ParameterKey": "Subnet",
+        "ParameterValue": "Enter the subnet ID"
+    },
+    {
+        "ParameterKey": "SG",
+        "ParameterValue": "Enter the The SG IDs of the EC2 instance"
+    },
+    {
+        "ParameterKey": "Image",
+        "ParameterValue": "Enter the Ubuntu18 AMI eg: ami-074251216af698218 Eg: you can refer th this link and get the base AMI (https://cloud-images.ubuntu.com/locator/ec2/)"
+    },
+    {
+        "ParameterKey": "Disksize",
+        "ParameterValue": "Enter the disk size. Preferred 30"
+    },
+    {
+        "ParameterKey": "AvailabilityZone",
+        "ParameterValue": "Enter the The AZ of the EC2 instance"
+    },
+    {
+        "ParameterKey": "VpcID",
+        "ParameterValue": "Enter the The VPC id of the EC2 instance"
+    }    
 ]
